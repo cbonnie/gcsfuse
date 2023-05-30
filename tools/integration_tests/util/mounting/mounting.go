@@ -29,7 +29,7 @@ func MountGcsfuse(flags []string) error {
 		flags...,
 	)
 
-	if *setup.TestPackagePath != "" {
+	if *setup.TestInstalledPackage {
 		mountCmd = exec.Command(
 			"gcsfuse",
 			flags...,
